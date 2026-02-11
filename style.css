@@ -1,0 +1,95 @@
+/* 1. Reset & Font Dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:url('assets/img/Bg.jpg') no-repeat center center fixed; /* Hijau pucat/putih tulang */
+    color: #2d3436;
+    line-height: 1.6;
+    margin: 40px;
+}
+
+/* 2. Navigasi */
+a {
+    text-decoration: none;
+    color: #2e7d32; /* Hijau daun */
+    font-weight: bold;
+    margin: 15px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 5px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #c8e6c9;
+    margin: 20px 0;
+}
+
+/* 3. Judul (Heading) */
+h1, h2 {
+    color: #1b5e20; /* Hijau tua */
+}
+
+h1 {
+    border-left: 5px solid #4caf50;
+    padding-left: 15px;
+    font-size: 2rem;
+}
+
+/* 4. Media (Gambar, Video) */
+img, video {
+    border-radius: 15px; /* Biar ujungnya melengkung halus */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan lembut */
+    border: 3px solid #ffffff;
+    margin-bottom: 20px;
+}
+
+/* 5. Tabel (Customized) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden; /* Agar radius berfungsi di tabel */
+}
+
+table, th, td {
+    border: none !important; /* Menghilangkan border kasar dari HTML */
+}
+
+th {
+    background-color: #4caf50 !important; /* Warna header tabel hijau */
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e8f5e9;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f8e9; /* Warna baris selang-seling */
+}
+
+tr:hover {
+    background-color: #dcedc8; /* Efek highlight saat kursor di atas baris */
+}
+
+.profil-img {
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius: 50%;
+  border: 4px solid #d8e2b7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0. 1);
+  
+  
+}
