@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greengra.com</title>
+    <style>
+        /* Import Font Serif Mewah */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&family=Montserrat:wght@200;400&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #1a1d16; /* Gelap Elegant */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Latar Belakang Cahaya Belakang (Glow) */
+        .bg-glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(150, 173, 115, 0.15) 0%, rgba(0,0,0,0) 70%);
+            z-index: 1;
+        }
+
+        .main-wrapper {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        /* Wadah Utama (Golden Ring) */
+        .ring-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Lingkaran Emas Berputar */
+        .gold-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid transparent;
+            border-top: 2px solid #d4af37; /* Gold */
+            border-radius: 50%;
+            animation: rotate 4s linear infinite;
+        }
+
+        .gold-ring::before {
+            content: '';
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Mangkuk Matcha Minimalis */
+        .bowl {
+            width: 100px;
+            height: 60px;
+            background: linear-gradient(135deg, #2d3520, #1a1d16);
+            border: 1px solid #4f6228;
+            border-radius: 5px 5px 50px 50px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Cairan Matcha dengan Kilauan Emas */
+        .liquid {
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: #738a4d;
+            border-radius: 40%;
+            animation: fill-and-wave 6s infinite ease-in-out;
+            box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        @keyframes fill-and-wave {
+            0%, 100% { transform: translateY(30%) rotate(0deg); }
+            50% { transform: translateY(-10%) rotate(180deg); }
+        }
+
+        /* Teks Mewah */
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37; /* Gold */
+            font-size: 2.5rem;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeInDown 2s forwards 0.5s;
+        }
+
+        .tagline {
+            color: #96ad73;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            opacity: 0;
+            margin-bottom: 40px;
+            animation: fadeInUp 2s forwards 1s;
+        }
+
+        /* TOMBOL BARU - UPGRADED */
+        .btn {
+            display: inline-block;
+            padding: 12px 40px;
+            color: #d4af37;
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            border: 1px solid #d4af37;
+            background: transparent;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInUp 2s forwards 1.8s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: #1a1d16;
+            background: #d4af37;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+            letter-spacing: 6px; /* Efek merenggang saat di-hover */
+        }
+
+        /* Kelopak Daun Emas Berjatuhan */
+        .petal {
+            position: absolute;
+            background: #d4af37;
+            width: 10px;
+            height: 10px;
+            border-radius: 50% 0 50% 0;
+            opacity: 0.3;
+            animation: fall 10s infinite linear;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fall {
+            0% { top: -10%; transform: translateX(0) rotate(0); }
+            100% { top: 110%; transform: translateX(100px) rotate(720deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+    
+    <div class="petal" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="petal" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="petal" style="left: 70%; animation-delay: 4s;"></div>
+    <div class="petal" style="left: 90%; animation-delay: 1s;"></div>
+
+    <div class="main-wrapper">
+        <div class="ring-container">
+            <div class="gold-ring"></div>
+            <div class="bowl">
+                <div class="liquid"></div>
+            </div>
+        </div>
+
+        <h1 class="brand-name">SELAMAT DATANG</h1>
+        <p class="tagline">semoga nyaman didalam website greengra</p>
+        
+        <a href="assets/pembuka/pembukaan.html" class="btn">lanjutkan</a>
+    </div> 
+
+</body>
+</html>
